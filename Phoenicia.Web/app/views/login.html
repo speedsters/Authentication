@@ -1,0 +1,33 @@
+﻿<form role="form">
+    <div class="row">
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-12">
+            <h2 class="form-login-heading ">Login</h2>
+            <div class="col-md-4 form-group">
+                <input type="text" class="form-control input-lg" placeholder="Email" data-ng-model="loginData.userName" requied>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-success" type="submit" data-ng-click="getpasscode()">Get PassCode</button>
+            </div>
+            <div ng-show="show">
+                <div class="col-md-4">
+                    <input type="password" class="form-control input-lg" placeholder="Passcode" data-ng-model="loginData.password" required>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" data-ng-model="loginData.useRefreshTokens"><strong>Keep me logged in.</strong>
+                        </label>
+                    </div>
+                    <button class="btn btn-md btn-info btn-block" type="submit" data-ng-click="login()">Login</button>
+                </div>
+            </div>
+            <div data-ng-hide="message == ''" class="alert alert-danger">
+                {{message}}
+            </div>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </div>
+</form>
